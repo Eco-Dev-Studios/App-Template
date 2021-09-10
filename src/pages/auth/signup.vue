@@ -1,8 +1,6 @@
 <template>
   <div>
-    <app-layout>
-      <home-widget-search />
-    </app-layout>
+    SIGN UP
   </div>
 </template>
 
@@ -13,3 +11,8 @@
 <style scoped>
 
 </style>
+
+<route lang="yaml">
+meta:
+  layout: auth
+</route>

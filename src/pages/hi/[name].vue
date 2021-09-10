@@ -4,7 +4,6 @@ import { useUserStore } from '~/stores/user'
 const props = defineProps<{ name: string }>()
 const router = useRouter()
 const user = useUserStore()
-const { t } = useI18n()
 
 watchEffect(() => {
   user.setNewName(props.name)
@@ -17,16 +16,17 @@ watchEffect(() => {
       <carbon-pedestrian class="inline-block" />
     </p>
     <p>
-      {{ t('intro.hi', { name: props.name }) }}
+      <!-- {{ t('intro.hi', { name: props.name }) }} -->
+      {{ props.name }}
     </p>
 
     <p class="text-sm opacity-50">
-      <em>{{ t('intro.dynamic-route') }}</em>
+      Dynamic Route
     </p>
 
     <template v-if="user.otherNames.length">
-      <p class="text-sm mt-4">
-        <span class="opacity-75">{{ t('intro.aka') }}:</span>
+      <p class="mt-4 text-sm">
+        <span class="opacity-75">Also know as:</span>
         <ul>
           <li v-for="name in user.otherNames" :key="name">
             <router-link :to="`/hi/${name}`" replace>
@@ -39,10 +39,10 @@ watchEffect(() => {
 
     <div>
       <button
-        class="btn m-3 text-sm mt-6"
+        class="m-3 mt-6 text-sm btn"
         @click="router.back()"
       >
-        {{ t('button.back') }}
+        Back
       </button>
     </div>
   </div>
