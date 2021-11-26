@@ -29,9 +29,12 @@
           <router-link to="/auth/signin/" class="mr-1 link">
             Sign In
           </router-link>
-          <router-link to="/auth/signup/" class="link">
+          <router-link to="/auth/signup/" class="mr-1 link">
             Sign Up
           </router-link>
+          <div class="rounded-full bg-gray-800 h-6 text-gray-50 w-6 relative dark:bg-gray-50 dark:text-gray-800">
+            <small class="font-bold inline-block center-x-y">{{ cart }}</small>
+          </div>
           <app-switch-mode class="ml-10" />
         </div>
         <div class="h-full items-center justify-end hidden -md:flex">
@@ -42,3 +45,11 @@
     </app-layout>
   </div>
 </template>
+
+<script setup lang="ts">
+import { storeToRefs } from 'pinia'
+import { useTodoStore } from '../../stores/todo'
+
+const todo = useTodoStore()
+const { cart } = storeToRefs(todo)
+</script>
