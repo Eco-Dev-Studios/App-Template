@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-image-widget-search bg-cover bg-center bg-no-repeat rounded-xl h-120 relative">
+  <div class="flex h-screen w-full items-center justify-center">
+    <div class="text-center w-1/2">
+      Home
+    </div>
   </div>
 </template>
 

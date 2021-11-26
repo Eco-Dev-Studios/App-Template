@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <app-layout>
-      <home-widget-search />
-    </app-layout>
-  </div>
+  <home-welcome-test />
 </template>
 
 <script setup lang="ts">

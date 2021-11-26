@@ -3,20 +3,14 @@ const router = useRouter()
 </script>
 
 <template>
-  <main class="text-center py-10 px-4 text-teal-700 dark:text-gray-200">
-    <div>
-      <p class="text-4xl">
-        <carbon-warning class="inline-block" />
-      </p>
-    </div>
-    <router-view class="?" />
-    <div>
-      <button
-        class="m-3 mt-8 text-sm btn"
-        @click="router.back()"
-      >
-        Back
-      </button>
-    </div>
-  </main>
+  <app-header />
+  <router-view />
+  <div class="flex items-center justify-center">
+    <button
+      class="rounded-sm font-bold bg-gray-800 mt-4 text-lg py-2 px-12 text-gray-50 dark:bg-gray-50 dark:text-gray-800"
+      @click="router.back()"
+    >
+      Back
+    </button>
+  </div>
 </template>

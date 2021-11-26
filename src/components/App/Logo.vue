@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="mx-auto fill-current text-gray-800 w-10 dark:text-gray-50"
+    class="fill-current  text-gray-800 w-8 dark:text-gray-50"
     viewBox="0 0 34 34"
     xmlns="http://www.w3.org/2000/svg"
   >
